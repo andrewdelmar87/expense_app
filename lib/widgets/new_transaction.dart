@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:expense_app/widgets/adaptive_flat_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -108,16 +112,7 @@ class _NewTransactionState extends State<NewTransaction> {
                   ],
                 ),
               ),
-              RaisedButton(
-                child: Text(
-                  'Add Transaction',
-                  style: TextStyle(
-                    color: Theme.of(context).textTheme.button.color,
-                  ),
-                ),
-                color: Theme.of(context).primaryColor,
-                onPressed: _submitData,
-              )
+              AdaptiveFlatButton('Add Transaction', _submitData)
             ],
           ),
         ),
